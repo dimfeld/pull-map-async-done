@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/dimfeld/pull-stream-map-async-done.git"
+    "url": "git://github.com/dimfeld/pull-map-async-done.git"
   },
   "keywords": [
     "pull-stream"

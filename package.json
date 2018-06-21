@@ -1,6 +1,6 @@
 {
   "name": "pull-async-map-done",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Async Map Pull Stream with Done callback",
   "main": "index.js",
   "scripts": {

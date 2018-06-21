@@ -1,0 +1,27 @@
+{
+  "name": "pull-async-map-done",
+  "version": "1.0.0",
+  "description": "Async Map Pull Stream with Done callback",
+  "main": "index.js",
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do echo === $t && node $t; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dimfeld/pull-stream-map-async-done.git"
+  },
+  "keywords": [
+    "pull-stream"
+  ],
+  "author": "Daniel Imfeld <dimfeld>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dimfeld/pull-map-async-done/issues"
+  },
+  "homepage": "https://github.com/dimfeld/pull-map-async-done#readme",
+  "devDependencies": {
+    "pull-spec": "0.0.1",
+    "pull-stream": "^3.6.8",
+    "tape": "^4.9.1"
+  }
+}

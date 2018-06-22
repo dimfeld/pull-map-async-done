@@ -130,3 +130,16 @@ tape('spec without callbacks', function(t) {
 
   t.end();
 });
+
+tape('without map function', function(t) {
+  pull(
+    pull.count(),
+    pull.take(21),
+    asyncMap(),
+    pull.collect(function(err, ary) {
+      console.log(ary)
+      t.equal(ary.length, 21)
+      t.end()
+    })
+  );
+});

@@ -221,3 +221,21 @@ tape('spec when done callback throws an error (async)', function(t) {
     )
   });
 });
+
+tape('without map function', function(t) {
+  var doneCalled = false;
+  pull(
+    pull.count(),
+    pull.take(21),
+    asyncMap(null, function(err, cb) {
+      doneCalled = true;
+      cb(null);
+    }),
+    pull.collect(function(err, ary) {
+      console.log(ary)
+      t.equal(ary.length, 21)
+      t.equal(doneCalled, true, 'done was called');
+      t.end()
+    })
+  );
+});

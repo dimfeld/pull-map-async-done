@@ -3,7 +3,10 @@
 function id (e) { return e }
 
 module.exports = function asyncMapDone (map, doneCb) {
-  if(!map) return id
+  if(!map) {
+    map = function(data, cb) { cb(null, data); }
+  }
+
   var busy = false, calledDone = false, abortCb, aborted
 
   var finish = function(endValue, cb) {
